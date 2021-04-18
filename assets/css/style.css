@@ -5,9 +5,11 @@
 body {
   background-color: #f2f2f2;
   font-style: normal;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: "Roboto", sans-serif;
 }
-
+h1 {
+  font-size: xx-large;
+}
 h1 a {
   text-decoration: none;
   color: #d2872c;
@@ -16,23 +18,16 @@ h1 a {
 
 .content-header {
   display: flex;
+  justify-content: space-between;
 }
 
 .content-menu {
-  color: #766f68;
-  overflow: hidden;
-  text-align: center;
-  margin-left: auto;
+  display: none;
 }
-.content-menu a {
-  float: left;
-  display: flex;
-  text-decoration: none;
-  color: #766f68;
-  text-align: left;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+
+.menu-mobile {
+  margin-right: 5px;
+  margin-top: 30px;
 }
 
 .content-center {
@@ -76,32 +71,65 @@ h1 a {
   height: 50px;
   font-size: medium;
   font-weight: bold;
-  color: cornsilk;
+  color: #f2f2f2;
 }
 
-@media only screen and (max-width: 600px) {
-  .content-header {
-    display: block;
+.footer {
+  margin-right: 25px;
+  text-align: right;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 700px) {
+  .menu-mobile {
+    display: none;
   }
   .content-menu {
-    display: block;
-    align-items: center;
+    color: #766f68;
+    overflow: hidden;
+    text-align: center;
+    margin-left: auto;
+    display: flex;
+    margin-top: 25px;
+  }
+  .content-menu a {
+    display: flex;
+    text-decoration: none;
+    color: #766f68;
+    text-align: left;
+    padding-right: 20px;
+    text-decoration: none;
+    font-size: 17px;
+    padding-top: 2px;
   }
 }
-@media (min-width: 600px) {
-  .content-center #img {
-    display: flexbox;
+
+@media only screen and (min-width: 700px) {
+  .menu-mobile {
+    display: none;
+  }
+  .content-menu {
+    color: #766f68;
+    overflow: hidden;
+    text-align: center;
+    margin-left: auto;
+    display: flex;
+    margin-top: 25px;
+  }
+  .content-menu a {
+    display: flex;
+    text-decoration: none;
+    color: #766f68;
+    text-align: left;
+    padding-right: 20px;
+    text-decoration: none;
+    font-size: medium;
+    padding-top: 2px;
+  }
+  .content-center img {
+    max-width: 60%;
+    width: auto;
+    height: auto;
+    display: flex;
     float: right;
-    align-items: center;
-    max-width: 70%;
-  }
-  .content-center .text-bigger {
-    white-space: nowrap;
-    font-size: xx-large;
-    align-content: flex-start;
-    margin-bottom: 10%;
-  }
-  .content-center {
-    //  background-color: brown;
   }
 }
